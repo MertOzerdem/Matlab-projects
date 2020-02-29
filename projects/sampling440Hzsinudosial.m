@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 a = 1; %frequency multiplier
-f0 = a*1760; %440 fundemental frequency
+f0 = a*440; %440 fundemental frequency
 w0 = 2*pi*f0;
 Ts = 0.0001; %time interval between samples
 n=0:Ts:3-Ts; % sample space
