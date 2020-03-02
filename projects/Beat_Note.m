@@ -11,5 +11,5 @@ grid on;
 xlabel('t in(Seconds)');
 ylabel('x(t)');
 title('Beat Note');
-soundsc(x3);
+soundsc(x4);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
