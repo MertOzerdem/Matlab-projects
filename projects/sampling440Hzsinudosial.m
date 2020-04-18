@@ -1,18 +1,14 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-a = 1; %frequency multiplier
-f0 = a*440; %440 fundemental frequency
-w0 = 2*pi*f0;
-Ts = 0.0001; %time interval between samples
-n=0:Ts:3-Ts; % sample space
-x1=sin(w0*n); % signal (sampled)
-%set = 0.01/30000;
-%t=0:set:0.01-set;
-plot(n,x1,'-r');
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+f0 =440;
+a = 2;
+t=0:0.0001:3;
+x3 = (exp(-((a^2)+2)*t)).*cos(2*pi*f0*t);
+plot(t,x3,'-r');
 xlim([0 0.01]);
 ylim([-1.5 1.5]);
 grid on;
-xlabel('Seconds(t)');
+xlabel('t in(Seconds)');
 ylabel('x(t)');
-title('Sampled Sinosoidal Signal of musical note E');
-sound(x1);
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+title('Sinusoid with Exponentially Decaying Envelope');
+soundsc(x3);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
